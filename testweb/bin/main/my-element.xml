@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:me="http://www.my-element.com/schema/sdf"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.my-element.com/schema/sdf http://www.my-element.com/schema/sdf/my-element.xsd"
+       default-lazy-init="false">
+       <me:mysdf id="mysdf" pattern="yyyy-MM-dd HH:mm:ss" lenient="true"></me:mysdf>
+</beans>

@@ -1,0 +1,4 @@
+rootProject.name = 'leaning'
+
+include 'custom-element'
+include 'testweb'
