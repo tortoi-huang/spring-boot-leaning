@@ -32,8 +32,7 @@ build/
 
 ### project
 /.gradle
-/client/out
-/server/out
-/gradle/wrapper/gradle-wrapper.jar
-/client/bin
-/server/bin
+/custom-element/out
+/testweb/out
+/custom-element/bin
+/testweb/bin
