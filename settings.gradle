@@ -1,4 +1,6 @@
 rootProject.name = 'leaning'
 
 include 'custom-element'
+include 'custom-enable'
+include 'custom-starter'
 include 'testweb'

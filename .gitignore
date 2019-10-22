@@ -32,7 +32,7 @@ build/
 
 ### project
 /.gradle
-/custom-element/out
-/testweb/out
-/custom-element/bin
-/testweb/bin
+!/*/*/out
+/*/out
+!/*/*/bin
+/*/bin
