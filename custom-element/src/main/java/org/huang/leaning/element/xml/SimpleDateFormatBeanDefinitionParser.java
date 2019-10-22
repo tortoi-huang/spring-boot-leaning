@@ -1,5 +1,6 @@
 package org.huang.leaning.element.xml;
 
+import org.huang.leaning.lib.MyElementFormater;
 import org.springframework.beans.factory.support.BeanDefinitionBuilder;
 import org.springframework.beans.factory.xml.AbstractSingleBeanDefinitionParser;
 import org.springframework.util.StringUtils;
@@ -9,8 +10,8 @@ import java.text.SimpleDateFormat;
 
 public class SimpleDateFormatBeanDefinitionParser extends AbstractSingleBeanDefinitionParser { 
 
-    protected Class<SimpleDateFormat> getBeanClass(Element element) {
-        return SimpleDateFormat.class; 
+    protected Class<MyElementFormater> getBeanClass(Element element) {
+        return MyElementFormater.class;
     }
 
     protected void doParse(Element element, BeanDefinitionBuilder bean) {

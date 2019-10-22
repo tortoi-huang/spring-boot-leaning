@@ -3,4 +3,5 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation project(':custom-element')
 	implementation project(':custom-starter')
+	implementation project(':custom-lib')
 }

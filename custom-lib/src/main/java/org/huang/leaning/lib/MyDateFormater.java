@@ -1,4 +1,4 @@
-package org.huang.leaning.starter;
+package org.huang.leaning.lib;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;

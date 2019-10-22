@@ -1,3 +1,4 @@
 dependencies {
+    compileOnly project(':custom-lib')
     compileOnly 'org.projectlombok:lombok:1.18.10'
 }

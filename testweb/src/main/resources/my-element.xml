@@ -4,5 +4,5 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
        http://www.my-element.com/schema/sdf http://www.my-element.com/schema/sdf/my-element.xsd"
        default-lazy-init="false">
-       <me:mysdf id="mysdf" pattern="yyyy-MM-dd HH:mm:ss" lenient="true"></me:mysdf>
+       <me:mysdf id="mysdf" pattern="yyyy-MM-dd HH:mm:ss" lenient="true" />
 </beans>
