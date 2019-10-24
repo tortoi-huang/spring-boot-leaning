@@ -10,7 +10,7 @@ import org.huang.leaning.lib.MyDateFormater;
 
 @Configuration
 @ConditionalOnClass(MyDateFormater.class)
-@EnableConfigurationProperties(MyStarterProperties.class)
+@EnableConfigurationProperties(MyStarterProperties.class)//对于本starter实验这个注解及类MyStarterProperties是多余的，可以省略,这里方便属性注入
 public class MyStarterConfig {
 	@Autowired
 	private MyStarterProperties properties;

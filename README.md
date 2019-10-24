@@ -17,9 +17,10 @@
     spring starter 本质是类似import功能导入一组已定义好的bean，在创建bean之前会根据是否存在相应的类和配置再确定是否创建bean。
     本例会根据用户是有加载了类 MyDateFormater 并且配置了属性 hello.stater，来确定是否创建 MyDateFormater的实例 bean。
     步骤如下：
-    2.1、 新建属性读取类 MyStarterProperties
+    2.1、 新建属性读取类 MyStarterProperties，对于starter实验这步可以省略，只是方便属性注入MyStarterConfig而已
     2.2、 新建 bean定义类 MyStarterConfig
     2.3、 配置 EnableAutoConfiguration 配置文件 META-INF/spring.factories
+    starter 通常用于springboot项目自动配置功能上。无法再非spring boot的spring项目中
 
 #3、custom-enable
     实验spring自定义Enable*功能。
@@ -27,4 +28,4 @@
     步骤如下：
     3.1、定义一组bean的配置如：CustomFormatConfig 与正常的spring java配置没有什么不同。
     3.2、定义一个Enable*注解，关联到上一步的配置，如本例中的EnableAllCustomFormat，当应用程序引用本注解时会自动导入前面配置的bean。
-    备注 可以通过 Enable*注解定义属性将参数传入bean配置类，配置类根据传入属性做相应的动态处理，如selecor包下的实现。
+    备注 可以通过 Enable*注解定义属性将参数传入bean配置类，配置类根据传入属性做相应的动态处理，如selecor包下的实现。enable功能通常使用在非spring boot项目上自动配置功能，也可以用在springboot项目上，但是在boot项目一般优先考虑starter形式
