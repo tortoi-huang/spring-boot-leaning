@@ -1,6 +1,6 @@
 
 plugins {
-    id 'org.springframework.boot' apply false
+    id 'org.springframework.boot' apply false //这里要引入依赖，但是不能使用springboot，否则会导致找不到main函数的编译错误
     id 'io.spring.dependency-management'
     id 'java'
 }
