@@ -1,3 +1,7 @@
+
 dependencies {
     implementation project(':custom-lib')
+    //implementation 'org.springframework.boot:spring-boot-starter'
+    implementation 'org.springframework:spring-beans:5.2.0.RELEASE'
+
 }

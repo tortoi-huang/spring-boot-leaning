@@ -21,6 +21,10 @@
     2.2、 新建 bean定义类 MyStarterConfig
     2.3、 配置 EnableAutoConfiguration 配置文件 META-INF/spring.factories
     starter 通常用于springboot项目自动配置功能上。无法再非spring boot的spring项目中
+	附加：
+	2.4、添加对spring配置元数据支持，使得第三方工具及外部引用可以探测到配置文件
+	2.4.1、添加 annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor' 依赖
+	2.4.2、添加META-INF/spring-configuration-metadata.json 元数据配置文件
 
 #3、custom-enable
     实验spring自定义Enable*功能。

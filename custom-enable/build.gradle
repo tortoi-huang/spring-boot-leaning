@@ -1,4 +1,5 @@
+
 dependencies {
     implementation project(':custom-lib')
-    //compileOnly project(':custom-lib')
+    implementation 'org.springframework:spring-context:5.2.0.RELEASE'
 }

@@ -1,0 +1,16 @@
+{
+  "groups" : [
+    {
+      "name": "hello.stater",
+      "type": "org.huang.leaning.starter.MyStarterProperties",
+      "sourceType": "org.huang.leaning.starter.MyStarterProperties"
+    }
+  ],
+  "properties" : [
+    {
+      "name": "hello.stater.format",
+      "type": "java.lang.String",
+      "sourceType": "org.huang.leaning.starter.MyStarterProperties"
+    }
+  ]
+}
