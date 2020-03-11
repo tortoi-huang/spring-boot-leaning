@@ -1,7 +1,17 @@
-
+plugins {
+    id 'org.springframework.boot' apply false
+    id 'io.spring.dependency-management'
+    id 'java'
+}
 dependencies {
     implementation project(':custom-lib')
     //implementation 'org.springframework.boot:spring-boot-starter'
     implementation 'org.springframework:spring-beans:5.2.0.RELEASE'
 
+}
+
+dependencyManagement {
+    imports {
+        mavenBom org.springframework.boot.gradle.plugin.SpringBootPlugin.BOM_COORDINATES
+    }
 }

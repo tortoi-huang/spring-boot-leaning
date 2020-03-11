@@ -1,3 +1,8 @@
+plugins {
+    id 'org.springframework.boot' apply false
+    id 'io.spring.dependency-management'
+    id 'java'
+}
 
 dependencies {
     implementation project(':custom-lib')

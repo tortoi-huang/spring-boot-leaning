@@ -1,3 +1,6 @@
+plugins {
+    id 'java'
+}
 configurations {
     // A configuration meant for consumers that need the API of this component
     exposedApi {
