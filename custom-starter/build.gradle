@@ -4,8 +4,6 @@ plugins {
     id 'io.spring.dependency-management'
     id 'java'
 }
-//apply plugin: 'org.springframework.boot'
-//apply plugin: 'io.spring.dependency-management'
 
 dependencies {
     compileOnly project(':custom-lib')
@@ -18,7 +16,7 @@ dependencies {
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     compileOnly 'org.projectlombok:lombok:1.18.10'
 }
-compileJava.dependsOn(processResources)
+//compileJava.dependsOn(processResources)
 dependencyManagement {
     imports {
         mavenBom org.springframework.boot.gradle.plugin.SpringBootPlugin.BOM_COORDINATES
