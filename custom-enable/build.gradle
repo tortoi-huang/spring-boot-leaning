@@ -4,6 +4,8 @@ plugins {
     id 'java'
 }
 
+sourceCompatibility = '1.8'
+
 dependencies {
     implementation project(':custom-lib')
     implementation 'org.springframework:spring-context:5.2.0.RELEASE'

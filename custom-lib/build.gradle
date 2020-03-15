@@ -1,6 +1,7 @@
 plugins {
     id 'java'
 }
+/*
 configurations {
     // A configuration meant for consumers that need the API of this component
     exposedApi {
@@ -15,6 +16,9 @@ configurations {
         canBeConsumed = true
     }
 }
+*/
+
+sourceCompatibility = '1.8'
 
 dependencies {
 }

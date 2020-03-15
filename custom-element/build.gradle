@@ -3,6 +3,9 @@ plugins {
     id 'io.spring.dependency-management'
     id 'java'
 }
+
+sourceCompatibility = '1.8'
+
 dependencies {
     implementation project(':custom-lib')
     //implementation 'org.springframework.boot:spring-boot-starter'

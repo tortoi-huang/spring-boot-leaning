@@ -2,7 +2,7 @@
 plugins {
 	id 'org.springframework.boot' version '2.2.5.RELEASE' apply false
 	id 'io.spring.dependency-management' version '1.0.9.RELEASE' apply false
-	id 'java'
+	//id 'java'
 }
 
 subprojects  {
@@ -10,7 +10,6 @@ subprojects  {
 
 	group = 'org.huang.leaning'
 	version = '0.0.1-SNAPSHOT'
-	sourceCompatibility = '1.8'
 
 	configurations {
 		developmentOnly
@@ -20,6 +19,8 @@ subprojects  {
 	}
 
 	repositories {
+		mavenLocal()//本地maven仓库
+		maven { url 'http://maven.aliyun.com/nexus/content/repositories/central/' }
 		mavenCentral()
 	}
 
