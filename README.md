@@ -2,7 +2,7 @@
     testweb实验web项目，用来学习各种。
 
 
-#1、custom-element 
+# 1、custom-element 
     项目实验自定义一个xml标签"mysdf"。
     参照 https://docs.spring.io/spring/docs/current/spring-framework-reference/core.html#xml-custom
     自定义标签功能可以帮助定一个复杂的bean并隐藏定义该bean的细节。步骤如下：
@@ -12,7 +12,7 @@
     1.4、 关联xml命名空间到bean的注册类
     1.5、 定义xml schema文件存放的位置
 
-#2、custom-starter
+# 2、custom-starter
     实验自定义spring starter 功能.
     spring starter 本质是类似import功能导入一组已定义好的bean，在创建bean之前会根据是否存在相应的类和配置再确定是否创建bean。
 	spring 启动时会扫描所有包下面的spring.factories文件，并根据文件中的org.springframework.boot.autoconfigure.EnableAutoConfiguration来找到相应的配置类，然后导入该配置
@@ -23,7 +23,7 @@
     2.3、 配置 EnableAutoConfiguration 配置文件 META-INF/spring.factories
     starter 通常用于springboot项目自动配置功能上。无法再非spring boot的spring项目中
 
-#3、custom-enable
+# 3、custom-enable
     实验spring自定义Enable*功能。
     enable功能是当注解被启用时导入一套已定义的bean，可以理解为@Import注解的别名，不同的是@Enable包含了配置导入的功能，引入一组已定义好的bean。其核心是@Enable*注解上要声明一个@Import注解，指明要导入哪些配置。
 	与starter不同的是如果只是引入依赖但是不使用@Enable*注解，配置是不会被导入的。
