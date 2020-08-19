@@ -1,7 +1,7 @@
 package org.huang.leaning.enable.select;
 
-import org.huang.leaning.lib.EnableDateFormater1;
-import org.huang.leaning.lib.EnableDateFormater2;
+import org.huang.leaning.lib.EnableDateFormatter1;
+import org.huang.leaning.lib.EnableDateFormatter2;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.ImportSelector;
@@ -32,8 +32,8 @@ public class CustomFormatConfigSeletor implements ImportSelector {
 	public static class Config1 {
 
 		@Bean
-		public EnableDateFormater2 enableDateFormater2() {
-			return new EnableDateFormater2("HH:mm:ss");
+		public EnableDateFormatter2 enableDateFormater2() {
+			return new EnableDateFormatter2("HH:mm:ss");
 		}
 	}
 
@@ -41,8 +41,8 @@ public class CustomFormatConfigSeletor implements ImportSelector {
 	public static class Config2 {
 
 		@Bean
-		public EnableDateFormater1 enableDateFormater1() {
-			return new EnableDateFormater1("dd HH_mm_ss");
+		public EnableDateFormatter1 enableDateFormater1() {
+			return new EnableDateFormatter1("dd HH_mm_ss");
 		}
 	}
 }

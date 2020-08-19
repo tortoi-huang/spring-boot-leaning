@@ -1,25 +1,23 @@
 package org.huang.leaning.element.xml;
 
-import org.huang.leaning.lib.MyElementFormater;
+import org.huang.leaning.lib.ElementFormatter;
 import org.springframework.beans.factory.support.BeanDefinitionBuilder;
 import org.springframework.beans.factory.xml.AbstractSingleBeanDefinitionParser;
 import org.springframework.util.StringUtils;
 import org.w3c.dom.Element;
 
-import java.text.SimpleDateFormat;
-
 public class SimpleDateFormatBeanDefinitionParser extends AbstractSingleBeanDefinitionParser { 
 
-    protected Class<MyElementFormater> getBeanClass(Element element) {
-        return MyElementFormater.class;
+    protected Class<ElementFormatter> getBeanClass(Element element) {
+        return ElementFormatter.class;
     }
 
     protected void doParse(Element element, BeanDefinitionBuilder bean) {
-        // this will never be null since the schema explicitly requires that a value be supplied
+        // 添加一个必填的构造函数参数
         String pattern = element.getAttribute("pattern");
         bean.addConstructorArgValue(pattern);
 
-        // this however is an optional property
+        // 添加一个可选的setter属性
         String lenient = element.getAttribute("lenient");
         if (StringUtils.hasText(lenient)) {
             bean.addPropertyValue("lenient", Boolean.valueOf(lenient));

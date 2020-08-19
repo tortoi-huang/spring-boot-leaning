@@ -3,16 +3,26 @@ package org.huang.leaning.lib;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class MyElementFormater {
+/**
+ * 这个类用于自定义元素实验
+ */
+public class ElementFormatter {
+    /**
+     * 实验构造函数参数
+     */
     private final SimpleDateFormat format;
+
+    /**
+     * 实验 setter 属性参数
+     */
     private boolean lenient;
 
-    public MyElementFormater(String format) {
+    public ElementFormatter(String format) {
         this.format = new SimpleDateFormat(format);
     }
 
-    public String sayHello() {
-        return format.format(new Date());
+    public String sayHello(Date date) {
+        return format.format(date);
     }
 
     public boolean isLenient() {

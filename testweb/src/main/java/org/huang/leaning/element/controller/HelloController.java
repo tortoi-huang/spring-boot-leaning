@@ -1,27 +1,29 @@
 package org.huang.leaning.element.controller;
 
-import org.huang.leaning.lib.EnableDateFormater1;
-import org.huang.leaning.lib.EnableDateFormater2;
-import org.huang.leaning.lib.MyDateFormater;
-import org.huang.leaning.lib.MyElementFormater;
+import org.huang.leaning.lib.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.Date;
 
 @RestController
 public class HelloController {
 	//这个bean
 	@Autowired
-	private MyElementFormater sdf;
+	private ElementFormatter elementFormatter;
 
 	@Autowired
-	private MyDateFormater myDateFormater;
+	private StarterDateFormatter starterDateFormatter;
+
+	@Autowired
+	private EnableDateFormatter enableDateFormatter;
 
 	@Autowired(required = false)
-	private EnableDateFormater1 enableDateFormater1;
+	private EnableDateFormatter1 enableDateFormatter1;
 
 	@Autowired(required = false)
-	private EnableDateFormater2 enableDateFormater2;
+	private EnableDateFormatter2 enableDateFormatter2;
 
 	@GetMapping("/hello")
 	public String hello() {
@@ -30,19 +32,22 @@ public class HelloController {
 
 	@GetMapping("/starter")
 	public String starter() {
-		return "hi starter:" + myDateFormater.sayHello();
+		return "hi starter:" + starterDateFormatter.sayHello(new Date());
 	}
 
 	@GetMapping("/element")
 	public String element() {
-		return "helle element:" + sdf.sayHello();
+		return "helle element:" + elementFormatter.sayHello(new Date());
 	}
 
 	@GetMapping("/enable")
 	public String enable() {
+		Date date = new Date();
 		return "helle enable:"
-				+ (enableDateFormater1 == null ? "enableDateFormater1 is null" : enableDateFormater1.sayHello())
+				+ (enableDateFormatter == null ? "enableDateFormater is null" : enableDateFormatter.sayHello(date))
 				+ "####"
-				+ (enableDateFormater2 == null ? "enableDateFormater2 is null" : enableDateFormater2.sayHello());
+				+ (enableDateFormatter1 == null ? "enableDateFormater1 is null" : enableDateFormatter1.sayHello(date))
+				+ "####"
+				+ (enableDateFormatter2 == null ? "enableDateFormater2 is null" : enableDateFormatter2.sayHello(date));
 	}
 }

@@ -9,8 +9,8 @@ import org.springframework.context.annotation.ImportResource;
 
 @SpringBootApplication
 @Configuration
-@ImportResource("my-element.xml") //导入xml配置做自定义标签实验
-//@EnableAllCustomFormat //enable启用bean实验
+@ImportResource("classpath:my-element.xml") //导入xml配置做自定义标签实验
+@EnableAllCustomFormat //enable启用bean实验
 @EnableOneCustomFormat(criteria = "") //通过条件动态导入bean实验
 public class CustomElementApplication {
 

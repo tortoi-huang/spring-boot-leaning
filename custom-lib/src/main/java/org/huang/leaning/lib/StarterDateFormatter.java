@@ -3,14 +3,14 @@ package org.huang.leaning.lib;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class MyDateFormater {
+public class StarterDateFormatter {
     private final SimpleDateFormat format;
 
-    public MyDateFormater(String format) {
+    public StarterDateFormatter(String format) {
         this.format = new SimpleDateFormat(format);
     }
 
-    public String sayHello() {
-        return format.format(new Date());
+    public String sayHello(Date date) {
+        return format.format(date);
     }
 }

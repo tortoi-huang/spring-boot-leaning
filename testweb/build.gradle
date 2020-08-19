@@ -18,3 +18,7 @@ dependencies {
 	implementation project(':custom-enable')
 	implementation project(':custom-lib')
 }
+
+test {
+	useJUnitPlatform()
+}
